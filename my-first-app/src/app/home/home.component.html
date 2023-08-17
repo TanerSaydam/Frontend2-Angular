@@ -1,0 +1,44 @@
+<h1>home works!</h1>
+<div class="col-4">
+    <form #addForm="ngForm" (ngSubmit)="save(addForm)">
+        <div class="form-group">
+            name
+            <input     
+            class="form-control"
+            #inputName 
+            (input)="checkInputIsValid(inputName)" 
+            required 
+            minlength="5" 
+            ngModel 
+            name="name" 
+            type="text">
+            <div class="invalid-feedback">
+                İsim kısmını yazmak zorundasınız!
+            </div>
+        </div>
+        
+        <div class="form-group">
+            LastName
+            <input
+            class="form-control"
+            #inputLastName
+            (input)="checkInputIsValid(inputLastName)" 
+             ngModel 
+             required
+             minlength="5"
+             name="lastName" 
+             type="text">
+             <div class="invalid-feedback">
+                Soyisim yazmak zorundasınız!
+             </div>
+        </div>
+        
+        <button [disabled]="addForm.valid === false">Save</button>
+    </form>
+</div>
+
+<ul>
+    <li *ngFor="let n of names">
+        {{n.name}}  {{n.lastName}}
+    </li>
+</ul>

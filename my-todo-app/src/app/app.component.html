@@ -1,0 +1,22 @@
+<h1>Todo App</h1>
+<div *ngIf="isUpdate === false">
+  Work
+  <input [(ngModel)]="work" type="text">
+  <button (click)="save()">Save</button>
+</div>
+
+<div *ngIf="isUpdate === true">
+  Update Work
+  <input type="text" [(ngModel)]="updateWork">
+  <button (click)="update()">Update</button>
+  <button (click)="cancel()">Cancel</button>
+</div>
+
+<hr>
+<ul>
+  <li *ngFor="let t of todos let i = index">
+    {{t}}
+    <button (click)="get(t,i)">Update</button>
+    <button (click)="delete(i)">Sil</button>
+  </li>
+</ul>
