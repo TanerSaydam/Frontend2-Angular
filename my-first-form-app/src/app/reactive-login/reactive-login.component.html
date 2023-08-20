@@ -1,0 +1,51 @@
+<div class="row d-flex justify-content-center" style="height: 100vh;">
+    <div class="col-lg-5 col-md-6 col-sm-12 col-12">
+        <div class="card">
+            <div class="card-header">
+                <h1>Login Page</h1>
+                <p>Please fill your login information</p>
+            </div>
+            <div class="card-body">
+                <form [formGroup]="loginReactiveForm" autocomplete="off">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">@</span>
+                            <input 
+                                (keyup)="checkValidation('email', $event)"
+                                formControlName="email" 
+                                type="email" 
+                                id="email" 
+                                class="form-control" 
+                                placeholder="example@gmailcom">
+                            <div class="invalid-feedback">
+                                Please write a valid email address
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="form-group mt-1">
+                        <label for="password">Password</label>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">*</span>
+                            <input 
+                                (keyup)="checkValidation('password', $event)" 
+                                formControlName="password" 
+                                type="password" 
+                                id="password"   
+                                class="form-control" 
+                                placeholder="********">
+                            <div class="invalid-feedback">
+                                Please write min 6 character
+                            </div>
+                        </div>                       
+                    </div>
+                    <div class="form-group mt-1">
+                        <button (click)="login()" class="btn btn-outline-primary w-100">
+                            Sign In
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
