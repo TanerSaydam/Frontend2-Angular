@@ -3,18 +3,42 @@
 ## Description
 When you give this ``Directive`` to a form element that is ill with ``NgForm``, it checks the validation rules of automatically linked elements and makes the class of those that fail the check ``is-invalid``. At the same time, if there is a div that gives a warning message, it automatically writes the validation error in it by default, if you want, you can write customized errors yourself.
 
-## Example Usage 1
+## Import Directive Standalone
 ```typescript
+import { FormValidateDirective } from 'form-validate-angular';
+
+Component({
+  imports: [CommonModule, FormsModule, FormValidateDirective],
+})
+```
+
+## Import Directive Module
+```typescript
+import { FormValidateDirective } from 'form-validate-angular';
+
+@NgModule({
+  imports: [
+    CommonModule,
+    FormsModule, 
+    FormValidateDirective
+  ]
+})
+export class AppModule { }
+```
+
+
+## Example Usage 1
+```html
 <form formValidate #form="ngForm" autocomplete="off">
 ```
 
 ## Example Usage 2
-```typescript
+```html
 <form formValidate [customValidateMessage]="false" #form="ngForm" autocomplete="off">
 ```
 
 ## Example Usage Full
-```typescript
+```html
 <form formValidate #form="ngForm" autocomplete="off">
     <div class="form-group">
         Email
