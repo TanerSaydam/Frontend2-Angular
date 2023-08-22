@@ -43,11 +43,12 @@ export class AppModule { }
     <div class="form-group">
         Email
         <input class="form-control" name="email" ngModel required email type="email">
+        <div class="invalid-feedback"></div>
     </div>
         <div class="form-group">
             Content
             <textarea class="form-control" name="content" ngModel required minlength="5" cols="30" rows="10"></textarea>
-            <div class="invalid-feedback">Örnek Uyarı</div>
+            <div class="invalid-feedback"></div>
         </div>
     <button class="btn btn-primary">Send</button>
 </form>
