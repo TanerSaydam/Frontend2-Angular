@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+.active{
+    background-color: black;
+    color: white;
+}
+
+a{
+    padding: 10px;
+    cursor: pointer;
+}
+
+.invalid{
+    border: 2px solid red;
+    color:  red;
+}

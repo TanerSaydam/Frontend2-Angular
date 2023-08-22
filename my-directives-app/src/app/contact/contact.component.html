@@ -1,0 +1,21 @@
+<h1>contact works!</h1>
+<div class="row d-flex justify-content-center">
+    <div class="col-4 shadow-lg p-3">
+        <form formValidate #form="ngForm" autocomplete="off">
+            <div class="form-group">
+                Email
+                <input class="form-control" name="email" ngModel required email type="email">
+                
+            </div>
+            <div class="form-group">
+                Content
+                <textarea class="form-control" name="content" ngModel required minlength="5" cols="30" rows="10">
+            
+                </textarea>
+                <div class="invalid-feedback">Örnek Uyarı</div>
+            </div>
+            
+            <button>Send</button>
+        </form>
+    </div>
+</div>

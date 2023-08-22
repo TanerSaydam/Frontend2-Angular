@@ -1,7 +1,8 @@
 import { Directive, ElementRef, HostListener, Input } from '@angular/core';
 
 @Directive({
-  selector: '[validate]'
+    selector: '[validate]',
+    standalone: true
 })
 export class ValidateDirective {
 
