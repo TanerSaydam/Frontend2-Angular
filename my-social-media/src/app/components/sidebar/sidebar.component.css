@@ -1,0 +1,9 @@
+.sidebar-avatar{
+    width: 200px;
+    height: 200px;
+    border-radius: 150px;
+}
+
+.card{
+    text-align: center;
+}

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34003.232
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialMediaApp.WebApi", "SocialMediaApp.WebApi.csproj", "{A2B1A5B8-B326-44BA-B478-A34E512641DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A2B1A5B8-B326-44BA-B478-A34E512641DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2B1A5B8-B326-44BA-B478-A34E512641DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2B1A5B8-B326-44BA-B478-A34E512641DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2B1A5B8-B326-44BA-B478-A34E512641DC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FA60F5D8-6147-455C-B43A-21997F85F266}
+	EndGlobalSection
+EndGlobal

@@ -7,10 +7,12 @@ import { SearchTodoPipe } from './pipes/search-todo.pipe';
 import { NamePipe } from './pipes/name.pipe';
 import { CurrencyPipe } from './pipes/currency.pipe';
 import { ExampleService } from './services/example.service';
+import { TrCurrencyPipe } from 'tr-currency';
+import { FormValidateDirective } from 'form-validate-angular';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, FormsModule, SearchTodoPipe, NamePipe ],
+  imports: [CommonModule, FormsModule, SearchTodoPipe, NamePipe, FormValidateDirective, TrCurrencyPipe ],
   template: `
   <button (click)="getAll()">Listeyi Getir</button>
   <button (click)="setTodos()">Todoyu Doldur</button>
@@ -19,6 +21,7 @@ import { ExampleService } from './services/example.service';
   <!-- <ul>
     <li *ngFor="let u of users | name">{{u}}</li>
   </ul> -->
+  <h1>{{money | trCurrency: '₺': true}}</h1>
   <h1>{{money | currency : 'TRY':'symbol-narrow'
       :'1.2-2'}}</h1>
   <h1>{{date | date:'dd.MM.yyy HH:mm:ss'}}</h1>
