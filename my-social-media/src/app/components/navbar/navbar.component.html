@@ -12,11 +12,11 @@
         </ul>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <img src="assets/avatars/image.jpeg" class="avatar">
-              <span class="name">Taner Saydam</span>
+              <img src="assets/avatars/{{auth.tokenDecode.imageUrl}}" class="avatar">
+              <span class="name">{{auth.tokenDecode.name}}</span>
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item">Logout</a></li>
+              <li><a (click)="logout()" class="dropdown-item">Logout</a></li>
             </ul>
           </li>
       </div>

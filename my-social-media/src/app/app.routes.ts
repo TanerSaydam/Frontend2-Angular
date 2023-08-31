@@ -1,4 +1,6 @@
+import { inject } from '@angular/core';
 import { Routes } from '@angular/router';
+import { AuthService } from './services/auth.service';
 
 export const routes: Routes = [
     {
@@ -12,6 +14,7 @@ export const routes: Routes = [
     {
         path: "",
         loadComponent: ()=> import("./components/layout/layout.component"),
+        canActivateChild: [()=> inject(AuthService).checkAuthorize()],
         children: [
             {
                 path: "",

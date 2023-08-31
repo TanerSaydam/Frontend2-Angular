@@ -1,4 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+a{
+    cursor: pointer;
+}
+
+a:hover{
+    color: blue !important;
+}
+
 @media screen and (max-width: 1300px) {
     .sidebar-avatar{
         width: 150px !important;

@@ -10,11 +10,11 @@
         "projectUniqueName": "C:\\Frontend2-Angular\\SocialMediaApp.WebApi\\SocialMediaApp.WebApi.csproj",
         "projectName": "SocialMediaApp.WebApi",
         "projectPath": "C:\\Frontend2-Angular\\SocialMediaApp.WebApi\\SocialMediaApp.WebApi.csproj",
-        "packagesPath": "C:\\Users\\tugay\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\taner\\.nuget\\packages\\",
         "outputPath": "C:\\Frontend2-Angular\\SocialMediaApp.WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\tugay\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\taner\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

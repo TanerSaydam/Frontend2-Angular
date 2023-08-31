@@ -1,10 +1,10 @@
 <div class="card">
     <div class="card-body">
         <div class="form-group">
-            <textarea cols="30" rows="3" class="form-control" placeholder="Ne düşünüyorsun?"></textarea>
+            <textarea cols="30" [(ngModel)]="content" rows="3" class="form-control" placeholder="Ne düşünüyorsun?"></textarea>            
         </div>
-        <div class="form-group mt-1">
-            <button class="btn btn-success send">
+        <div class="form-group mt-2">
+            <button (click)="send()" class="btn btn-success send">
                 <i class="fa-solid fa-paper-plane"></i>
                 Send
             </button>
@@ -12,17 +12,29 @@
     </div>
 </div>
 
-<div class="card mt-4">
+<div class="card mt-4" *ngFor="let p of posts">
     <div class="card-header">
-        <img src="assets/avatars/image.jpeg" class="avatar">
-        <span>Taner Saydam</span>
-        <span>27.08.2023 12:55</span>
+        <img src="assets/avatars/{{p.userImage}}" class="avatar">
+        <span>{{p.userName}}</span>
+        <span>{{p.date | date:'dd.MM.yyyy HH:mm'}}</span>
     </div>
     <div class="card-body">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse laboriosam natus dolorem consequuntur voluptates minima ducimus possimus commodi nesciunt soluta necessitatibus, perspiciatis velit laudantium veritatis excepturi. Impedit corporis voluptas mollitia.</p>
-        <button class="btn btn-primary like">
-            <i class="fa-regular fa-thumbs-up"></i>
-            Like
-        </button>
+        <p>
+            {{p.content}}
+        </p> 
+        <div>
+            <p style="float: right;">            
+                <ng-container *ngFor="let l of p.likes">
+                    <img class="like-image" src="assets/avatars/{{l.user.imageUrl}}" alt="" 
+                    style="margin: 0px 5px" title="{{l.user.name}}">
+                    <span style="font-size: 13px;">{{l.user.name}}</span>
+                </ng-container>            
+            </p>   
+            <button style="float: left;" (click)="likeOrUnlike(p.id)" *ngIf="check(p.userId)" class="btn like" 
+                [ngClass]="changeLikeOrUnLikeBtn(p)">
+                <i class="fa-regular fa-thumbs-up"></i>
+                Like
+            </button>
+        </div>    
     </div>
 </div>
