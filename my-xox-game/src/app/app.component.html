@@ -1,0 +1,20 @@
+<div class="row game-card">
+  <div class="col-9">
+    <div class="row">
+      <div (click)="setMark(i)" class="col-4 box" [ngClass]="changeWinnerBoxClass(i)" *ngFor="let g of games let i = index">
+        {{g}}
+      </div>
+    </div>
+  </div>
+
+  <div class="col-3">
+    <h1 *ngIf="!isGameOver" class="alert alert-danger">Sıradaki {{mark}}</h1>
+    <h1 *ngIf="isGameOver" class="alert alert-info">Oyun Bitti! {{winner}}</h1>
+    <button class="btn btn-danger w-100" (click)="newGame()">Yeni Oyun</button>
+    <ol class="mt-2">
+      <li *ngFor="let m of gameMoves let i = index" class="mt-1">
+        <button (click)="setMove(m)" class="btn btn-primary">Hamle</button>
+      </li>
+    </ol>
+  </div>
+</div>
